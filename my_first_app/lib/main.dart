@@ -16,7 +16,9 @@ class App extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home:  
-      HomeApp('escalope'),
+      HomeApp(
+        'Dice Roller App' // the title of the app,
+      ),
       );
   }
 }
