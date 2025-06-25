@@ -119,7 +119,7 @@ class _HomeAppState extends State<HomeApp> {
                 height: 140,
                 fit: BoxFit.cover,
               ),
-              const SizedBox(height: 80),
+              const SizedBox(height: 70),
               ElevatedButton(
                 onPressed: _rollDice,
                 style: ElevatedButton.styleFrom(
