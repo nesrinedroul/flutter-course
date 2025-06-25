@@ -33,13 +33,14 @@ class _HomeAppState extends State<HomeApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        leading: const Icon(Icons.home),
+        leading: const Icon(Icons.castle_rounded),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
               showDialog(
                 context: context,
+                barrierColor: const Color.fromARGB(136, 255, 255, 255),
                 builder: (context) {
                   return AlertDialog(
                     title: const Text('Settings'),
@@ -125,6 +126,10 @@ class _HomeAppState extends State<HomeApp> {
                   backgroundColor: const Color.fromARGB(255, 248, 112, 182),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  foregroundColor: const Color.fromARGB(255, 0, 26, 255)
                 ),
                 child: const Text(
                   'Roll the Dice',
