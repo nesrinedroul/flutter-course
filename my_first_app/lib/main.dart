@@ -12,7 +12,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'title',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.purple, // the primary color of the app
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            fontSize: 20, // the font size of the text
+            color: Colors.white, // the color of the text
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home:  
