@@ -10,12 +10,12 @@ class HomeApp extends StatefulWidget {
 }
 
 class _HomeAppState extends State<HomeApp> {
-  String _imagePath = 'images/dice1.jpg'; 
+  String _imagePath = 'image/dice1.jpg';
 
   void _rollDice() {
     final random = Random().nextInt(6) + 1; 
     setState(() {
-      _imagePath = 'images/dice$random.jpg';
+      _imagePath = 'image/dice$random.jpg';
     });
 
     ScaffoldMessenger.of(context).showSnackBar(
@@ -78,14 +78,14 @@ class _HomeAppState extends State<HomeApp> {
           ),
         ],
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 255, 188, 240),
+        backgroundColor: const Color.fromARGB(255, 156, 12, 127),
       ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: RadialGradient(
             colors: [
               Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 255, 137, 227),
+              Color.fromARGB(255, 189, 0, 146),
             ],
             center: Alignment.center,
             radius: 1.7,
