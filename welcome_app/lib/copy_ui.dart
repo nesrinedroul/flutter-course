@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_app/main.dart';
 
 void main() {
-  runApp(const WelcomePage());
+  runApp(const LoginPage());
 }
 
 void onPress() {
@@ -9,8 +10,8 @@ void onPress() {
   print("Button Pressed");
 }
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +27,6 @@ class WelcomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                 'images/logo.png',
-                  fit: BoxFit.fitWidth,
-                  width: 70,
-            
-                ),
                 
                 const SizedBox(height: 10),
                 const Text(
@@ -124,7 +119,12 @@ const SizedBox(height: 20),
     ),
     SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: onPress,
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WelcomePage(),
+                    ),
+                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(213, 234, 255, 1),
                     foregroundColor: const Color.fromARGB(255, 0, 94, 170),
@@ -133,7 +133,6 @@ const SizedBox(height: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    
                   ),
                   child: const Text('Login to your account'),
                 ),
