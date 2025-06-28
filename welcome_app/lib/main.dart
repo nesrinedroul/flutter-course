@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
-import 'package:welcome_app/copy_ui.dart'; // Required for kReleaseMode
+import 'package:welcome_app/copy_ui.dart';
+import 'package:welcome_app/form.dart'; // Required for kReleaseMode
 
 void main() {
   runApp(
     DevicePreview(
       enabled: !kReleaseMode, // Enable only in debug mode
-      builder: (context) => const MyApp(),
+      builder: (context) => const FormApp(),
     ),
   );
 }
