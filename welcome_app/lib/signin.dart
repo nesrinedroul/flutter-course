@@ -1,21 +1,6 @@
+
 import 'package:flutter/material.dart';
 import 'package:welcome_app/signup.dart';
-
-void main() {
-  runApp(const FormApp());
-}
-
-class FormApp extends StatelessWidget {
-  const FormApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const SignInPage(),
-    );
-  }
-}
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -23,7 +8,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true, // Important: moves UI when keyboard shows
+     resizeToAvoidBottomInset: true,
      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         leading: const Icon(Icons.arrow_back),
@@ -46,7 +31,6 @@ class SignInPage extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        
         child: SizedBox(
         width: double.infinity,
         height: double.infinity,
@@ -56,7 +40,7 @@ class SignInPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               const Text(
                 'Sign in',
                 style: TextStyle(
@@ -72,6 +56,7 @@ class SignInPage extends StatelessWidget {
                 height: 250,
                 fit: BoxFit.fitHeight,
               ),
+
               const Text(
                 'Welcome Back !',
                 style: TextStyle(
@@ -98,7 +83,7 @@ class SignInPage extends StatelessWidget {
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Handle sign in
@@ -107,7 +92,7 @@ class SignInPage extends StatelessWidget {
                   backgroundColor: const Color.fromARGB(255, 0, 32, 85),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 84, vertical: 22),
+                      horizontal: 84, vertical: 12),
                 ),
                 child: const Text('Login', 
                   style: TextStyle(
@@ -151,7 +136,7 @@ class SignInPage extends StatelessWidget {
                   backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                   foregroundColor:  const Color.fromARGB(255, 0, 32, 85),
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 84, vertical: 22),
+                      horizontal: 84, vertical: 12),
                   side: const BorderSide(
                     color: Color.fromARGB(255, 0, 32, 85),
                     width: 2,
@@ -163,6 +148,7 @@ class SignInPage extends StatelessWidget {
                     fontSize: 18,
                   ),
               ),),
+              const SizedBox(height:60),
             ], 
           ),
         ),
@@ -170,4 +156,3 @@ class SignInPage extends StatelessWidget {
     ),);
   }
 }
-

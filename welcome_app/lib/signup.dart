@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_app/form.dart';
+import 'package:welcome_app/main.dart';
 
 void main() {
   runApp(const SignUp());
@@ -118,11 +118,12 @@ class SignInPage extends StatelessWidget {
                     ),
                   );
                 },
+                
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 0, 32, 85),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 84, vertical: 22),
+                      horizontal: 84, vertical: 12),
                 ),
                 child: const Text('Register',
                 style: TextStyle(
@@ -132,7 +133,7 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               // prevents keyboard overlap
-               const SizedBox(height: 10),
+               const SizedBox(height:60),
              
             ],
           ),
