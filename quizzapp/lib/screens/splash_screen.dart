@@ -23,19 +23,19 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF001F3F),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('image/logoq.jpg', width: 220),
             const SizedBox(height: 20),
-            const CircularProgressIndicator(color: Colors.white),
+            const CircularProgressIndicator(color: Color.fromARGB(255, 18, 0, 132)),
             const SizedBox(height: 16),
             const Text(
               "Welcome to QuizApp",
               style: TextStyle(
-                color: Colors.white,
+                color: Color.fromARGB(255, 37, 0, 116),
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
               ),

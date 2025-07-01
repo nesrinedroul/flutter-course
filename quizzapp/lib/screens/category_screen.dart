@@ -6,13 +6,14 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final categories = ['Science', 'History', 'Math'];
+    final categories = ['Science', 'History', 'Math', 'Geography', 'Literature', 'Sports', 'Technology', 'General Knowledge'];
 
     return Scaffold(
       backgroundColor: const Color(0xFFEAF6FF),
       appBar: AppBar(
         backgroundColor: const Color(0xFF004080),
-        title: const Text('Choose Category'),
+        title: const Text('Choose Category', style: TextStyle(
+          fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
