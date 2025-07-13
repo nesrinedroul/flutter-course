@@ -85,8 +85,9 @@ class _QuizScreenState extends State<QuizScreen> {
             ...List.generate(q.options.length, (i) {
               Color? color;
               if (answered) {
-                if (i == q.correctIndex) color = Colors.green[300];
-                else if (i == selectedIndex) color = Colors.red[300];
+                if (i == q.correctIndex) {
+                  color = Colors.green[300];
+                } else if (i == selectedIndex) color = Colors.red[300];
               }
 
               return Card(
