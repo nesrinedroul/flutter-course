@@ -18,12 +18,67 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: const Icon(Icons.mood),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {
+                // Handle search action
+              },
+            ),
+             IconButton(
+              icon: const Icon(Icons.save_alt_rounded),
+              onPressed: () {
+                // Handle save action
+              },
+            ),
+             IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {
+                // Handle search action
+              },
+            ),
+          ],
           title: const Text('my first app'),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 255, 193, 255),
         ),
-        body: Center(child: const Text('i love samia!')),
-        backgroundColor: const Color.fromARGB(255, 255, 119, 176),
+        body: Expanded(child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text(
+              'Hello, World!',
+              style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 66, 0, 57)),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Handle button press
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 255, 119, 176),
+              ),
+              child: const Text('Press Me'),
+            ),
+             const Text(
+              'Hello, World!',
+              style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 66, 0, 57)),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Handle button press
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 255, 119, 176),
+              ),
+              child: const Text('Press Me'),
+            ),
+          ],
+        )),
+
+        backgroundColor: const Color.fromARGB(255, 255, 180, 211),
           bottomNavigationBar: BottomNavigationBar(
             onTap: x,
             items: [
