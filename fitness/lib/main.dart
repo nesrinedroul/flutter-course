@@ -43,42 +43,105 @@ class App extends StatelessWidget {
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 255, 193, 255),
         ),
-        body: Expanded(child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 255, 193, 255),
+                ),
+                child: Text(
+                  'Drawer Header',
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+                onTap: () {
+                  // Handle home tap
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                onTap: () {
+                  // Handle settings tap
+                },
+              ),
+            ],
+          ),
+        ),
+        body: GridView.count(
+          crossAxisCount: 2,
+          padding: const EdgeInsets.all(20.0),
+          crossAxisSpacing: 20.0,
+          mainAxisSpacing: 20.0,
           children: [
-            const Text(
-              'Hello, World!',
-              style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 66, 0, 57)),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Handle button press
-              },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 255, 119, 176),
+            Container(
+              decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 111, 0, 111),
+          borderRadius: BorderRadius.circular(10.0),
               ),
-              child: const Text('Press Me'),
-            ),
-             const Text(
-              'Hello, World!',
-              style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 66, 0, 57)),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Handle button press
-              },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 255, 119, 176),
+              child: const Center(
+          child: Text(
+            'Hello, Nesri!',
+            style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 255, 150, 206)),
+          ),
               ),
-              child: const Text('Press Me'),
+            ),
+            Container(
+              decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 222, 19, 87),
+          borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+          child: Text(
+            'Hello, Nesri!',
+            style: TextStyle(fontSize: 24, color: Colors.pink[900]),
+          ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 255, 107, 157),
+          borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+          child: Text(
+            'Hello, Nesri!',
+            style: TextStyle(fontSize: 24, color: Colors.pink[900]),
+          ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 255, 198, 217),
+          borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+          child: Text(
+            'Hello, Nesri!',
+            style: TextStyle(fontSize: 24, color: Colors.pink[900]),
+          ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 255, 98, 150),
+          borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+          child: Text(
+            'Hello, Nesri!',
+            style: TextStyle(fontSize: 24, color: Colors.pink[900]),
+          ),
+              ),
             ),
           ],
-        )),
-
-        backgroundColor: const Color.fromARGB(255, 255, 180, 211),
+        ),
+        backgroundColor: const Color.fromARGB(255, 255, 226, 226),
           bottomNavigationBar: BottomNavigationBar(
             onTap: x,
             items: [
@@ -90,7 +153,7 @@ class App extends StatelessWidget {
                 icon: Icon(Icons.settings),
                 label: 'Settings',
               )],
-              backgroundColor: const Color.fromARGB(255, 255, 193, 255),
+              backgroundColor: const Color.fromARGB(255, 248, 186, 248),
             selectedFontSize: 16.0,
             selectedItemColor: const Color.fromARGB(255, 66, 0, 57),
           ),
