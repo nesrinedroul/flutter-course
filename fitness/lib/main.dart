@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(const App());
@@ -23,7 +24,15 @@ class App extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.search),
               onPressed: () {
-                // Handle search action
+                  Fluttertoast.showToast(
+                    msg: "Search button pressed",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.BOTTOM,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0,
+                  );
               },
             ),
              IconButton(
@@ -59,6 +68,7 @@ class App extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text('Home'),
+                subtitle: const Text('Go to home'),
                 onTap: () {
                   // Handle home tap
                 },
