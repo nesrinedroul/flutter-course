@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
-  runApp(const App());
+  runApp(const MyApp());
 }
 void x(int index) {
   // Handle navigation
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
 
@@ -17,7 +17,17 @@ class App extends StatelessWidget {
       title: 'my first app',
       theme: ThemeData(primarySwatch: Colors.red),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: const MyHomePage(),
+      );
+  }
+}
+ 
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.mood),
           actions: [
@@ -38,7 +48,44 @@ class App extends StatelessWidget {
              IconButton(
               icon: const Icon(Icons.save_alt_rounded),
               onPressed: () {
-                // Handle save action
+                showDialog(
+  context: context,
+  builder: (BuildContext context) {
+    return AlertDialog(
+      title: const Text('Alert'),
+      content: Container(
+        width: 200,
+        height: 100,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            Divider(
+              color: Colors.red,
+              thickness: 2.0,
+            ),
+            SizedBox(height: 10),
+            Text('This is an alert dialog'),
+          ],
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop(); // closes the dialog
+          },
+          child: const Text('Cancel'),
+        ),
+        TextButton(
+          onPressed: () {
+            // You can handle OK logic here
+            Navigator.of(context).pop(); // also closes the dialog
+          },
+          child: const Text('OK'),
+        ),
+      ],
+    );
+                  },
+                );
               },
             ),
              IconButton(
@@ -167,7 +214,6 @@ class App extends StatelessWidget {
             selectedFontSize: 16.0,
             selectedItemColor: const Color.fromARGB(255, 66, 0, 57),
           ),
-        ),
-      );
+        );
   }
-}
+  }
