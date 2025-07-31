@@ -91,7 +91,13 @@ class MyHomePage extends StatelessWidget {
              IconButton(
               icon: const Icon(Icons.search),
               onPressed: () {
-                // Handle search action
+               SnackBar snackBar = SnackBar(
+                  content: const Text('Search button pressed'),
+                  duration: const Duration(seconds: 2),
+                  backgroundColor: const Color.fromARGB(255, 255, 186, 181),
+                 
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               },
             ),
           ],
